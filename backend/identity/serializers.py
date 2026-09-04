@@ -1,10 +1,10 @@
 """
 Input validation for the administrative endpoints.
 
-Validation here is a privacy control, not a formality. The extensibility claim
-— that new contexts are data and can be added at runtime — is only defensible
-if creating a context cannot be used to reconstruct the full record. Three
-rules enforce that:
+Validation here is a privacy control, not a formality. The extensibility
+claim, that new contexts are data and can be added at runtime, is only
+defensible if creating a context cannot be used to reconstruct the full
+record. Three rules enforce that:
 
 *A purpose is mandatory.* A context is a declared reason for disclosure. One
 created without a stated purpose cannot afterwards be audited against the

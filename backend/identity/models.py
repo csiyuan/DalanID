@@ -317,7 +317,7 @@ class AuditEntry(models.Model):
 
         Appending is inherently serial: an entry cannot be hashed until the
         hash of its predecessor is known. A naive read-then-write loses that
-        under concurrency — two simultaneous requests both read the same head,
+        under concurrency - two simultaneous requests both read the same head,
         both compute sequence n+1, and the second violates the uniqueness
         constraint. Worse than the error is what it implies: if the constraint
         were absent, two entries would claim the same predecessor and the chain
@@ -350,7 +350,7 @@ class AuditEntry(models.Model):
             except (IntegrityError, OperationalError) as error:
                 # IntegrityError: another writer took this sequence number.
                 # OperationalError: the table was locked before we got there.
-                # Both mean the same thing operationally — we lost the race —
+                # Both mean the same thing operationally - we lost the race -
                 # so both are retried against the new head. Backoff is
                 # randomised so retrying writers do not re-collide in step.
                 last_error = error
@@ -417,7 +417,7 @@ class UsedKey(models.Model):
         pass: the database admits exactly one.
 
         Two database errors can arise here and they mean opposite things.
-        ``IntegrityError`` means the row already exists — the key really was
+        ``IntegrityError`` means the row already exists - the key really was
         spent, and the caller must be refused. ``OperationalError`` means the
         table was locked and this writer never got to try; refusing on that
         would reject a legitimate first presentation because the server was
@@ -455,7 +455,7 @@ class UsedTotpCode(models.Model):
     """A second-factor code that has already been accepted.
 
     A TOTP code stays valid for its whole time step, so without this an
-    attacker who observes a code — over the shoulder, or in a log — can reuse
+    attacker who observes a code - over the shoulder, or in a log - can reuse
     it for the remainder of that window. Recording accepted codes per citizen
     makes each one single-use, which is what RFC 6238 section 5.2 requires of
     a verifier.

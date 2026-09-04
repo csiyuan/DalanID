@@ -192,9 +192,9 @@ class ContextCreateView(APIView):
     rows, so a new purpose can be introduced without redeploying the service.
 
     Authorisation is deliberately doubled. The caller must present a valid
-    Context-Key for the ``context-administration`` context — administration is
+    Context-Key for the ``context-administration`` context - administration is
     itself a context, so the same verification path guards it as guards
-    disclosure — *and* hold the ``can_create_contexts`` role. Either check
+    disclosure - *and* hold the ``can_create_contexts`` role. Either check
     alone would be weaker: a stolen administrative key is useless without the
     role, and the role is useless without a live grant.
 
@@ -371,7 +371,7 @@ def my_disclosures(request, public_id):
     """Let a citizen read the record of who has seen their data.
 
     This is the counterpart to the disclosure endpoint. Where that answers "may
-    this organisation see this field?", this answers "who has seen mine?" — and
+    this organisation see this field?", this answers "who has seen mine?" - and
     without it, the audit chain is a control that serves operators while the
     person it is nominally about remains in the dark.
 

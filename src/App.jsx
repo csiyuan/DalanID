@@ -8,7 +8,7 @@ import {
 import * as api from "./api";
 
 /**
- * DalanID — contextual profile disclosure.
+ * DalanID - contextual profile disclosure.
  *
  * This component no longer decides what may be disclosed. Every value it shows
  * arrives from the Django service, which verifies a signed Context-Key and
@@ -17,9 +17,9 @@ import * as api from "./api";
  * it is not authorised for returns 401 and the interface renders the refusal.
  *
  * Icons and tier colours remain client-side because they are presentation,
- * not policy. Everything that constitutes policy — which fields a context may
+ * not policy. Everything that constitutes policy - which fields a context may
  * see, whether a party may invoke it, whether a value is disclosed raw or
- * derived — is server state.
+ * derived - is server state.
  */
 
 const CITIZEN = "maria-da-costa";

@@ -12,12 +12,12 @@ Run against a live server::
 
 Five strands are measured:
 
-1. Disclosure correctness — every context against an independently written
+1. Disclosure correctness - every context against an independently written
    expectation, not against the seeded configuration.
-2. Security refusals — one case per reason code, with expected status.
-3. Minimisation — fields released per context against the full schema.
-4. Audit integrity — chain verification before and after deliberate tampering.
-5. Latency — contextual disclosure against the unprotected baseline.
+2. Security refusals - one case per reason code, with expected status.
+3. Minimisation - fields released per context against the full schema.
+4. Audit integrity - chain verification before and after deliberate tampering.
+5. Latency - contextual disclosure against the unprotected baseline.
 
 The oracle in strand 1 matters. The preliminary report acknowledged that its
 48/48 result was weakened because expectations and seed data shared a source,

@@ -20,8 +20,8 @@ htmlcov/
 # OS
 .DS_Store
 
-# The report itself — not published with the source
+# The report itself - not published with the source
 *.docx
 
-# Local working notes — never published
+# Local working notes - never published
 CLAUDE.md

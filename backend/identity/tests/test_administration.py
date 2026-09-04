@@ -2,7 +2,7 @@
 Tests for the administrative surface.
 
 Two properties are under test. First, that creating a context requires both a
-valid administrative Context-Key and the role — either alone must fail. Second,
+valid administrative Context-Key and the role - either alone must fail. Second,
 that extensibility cannot be turned into a privilege escalation: the caps in
 :mod:`identity.serializers` must stop an authorised party from defining a
 context broad enough to reconstruct the unprotected record.

@@ -8,8 +8,8 @@ and the citizen is the only party positioned to notice when they do not. The
 audit chain existed from the start; until this module, only operators could see
 it.
 
-Authentication reuses the same primitive as Context-Keys — HMAC-SHA256 over a
-canonical payload — but with a separate secret held on the citizen record. The
+Authentication reuses the same primitive as Context-Keys - HMAC-SHA256 over a
+canonical payload - but with a separate secret held on the citizen record. The
 separation is the point: a relying party must not be able to read a citizen's
 audit trail, and a citizen must not be able to invoke a disclosure context.
 Sharing one secret space would make both possible.

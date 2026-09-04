@@ -13,7 +13,7 @@ Two properties matter for the privacy argument.
 context permits and pulls each from the citizen record. It never starts with
 the full record and removes fields. A field newly added to the citizen schema
 is therefore invisible to every existing context until someone explicitly
-grants it — the system fails closed as it grows.
+grants it - the system fails closed as it grows.
 
 *Minimisation within a field, not only between fields.* An insurance assessor
 needs to know an applicant's age band, not their birth date. Returning a raw

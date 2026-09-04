@@ -100,7 +100,7 @@ export function fetchFullRecord(citizenId) {
  *
  * Refusing in this module instead would be faster and wrong: no request
  * would reach the service, nothing would enter the audit chain, and the
- * interface would be deciding disclosure — which is the one thing it does
+ * interface would be deciding disclosure - which is the one thing it does
  * not do.
  */
 const UNGRANTED_PARTY = "unaffiliated-vendor";

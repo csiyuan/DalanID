@@ -4,7 +4,7 @@ Citizen authentication for subject access.
 Before this module, ``POST /subject/token`` accepted a citizen's public
 identifier and returned a token granting full read access to that citizen's
 disclosure history. Anyone who could guess an identifier could read the audit
-trail of the person it belonged to — which inverted the purpose of the endpoint
+trail of the person it belonged to - which inverted the purpose of the endpoint
 entirely. Subject access exists to give the citizen oversight; as implemented
 it gave everyone oversight of the citizen.
 
@@ -20,8 +20,8 @@ a short window of the first. The challenge token is signed, carries a two
 minute expiry, and is useless on its own.
 
 TOTP is implemented here from RFC 6238 rather than taken from a library. It is
-roughly thirty lines and the mechanism — an HMAC over a time counter, reduced
-to six digits by dynamic truncation — is worth being explicit about in a
+roughly thirty lines and the mechanism - an HMAC over a time counter, reduced
+to six digits by dynamic truncation - is worth being explicit about in a
 project whose subject is verification.
 
 Threat model and its limits. Passwords are stored only as hashes, the second

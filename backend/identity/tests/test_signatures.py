@@ -1,8 +1,8 @@
 """
 Tests for the signature suites.
 
-The interesting cases are not that Ed25519 signing works — it is a well-tested
-library primitive — but that supporting two suites has not introduced the
+The interesting cases are not that Ed25519 signing works - it is a well-tested
+library primitive - but that supporting two suites has not introduced the
 algorithm-confusion vulnerabilities that have repeatedly affected JWT
 implementations. Those tests are in ``AlgorithmConfusionTests`` and are the
 reason this file exists.

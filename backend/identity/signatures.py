@@ -23,10 +23,10 @@ Algorithm confusion
 -------------------
 Supporting two suites introduces the vulnerability class that has repeatedly
 affected JWT implementations: if the token states its own algorithm, an
-attacker chooses it. The two classic forms are downgrade — presenting an HMAC
+attacker chooses it. The two classic forms are downgrade - presenting an HMAC
 signature against a party registered for a public-key suite, where a naive
 implementation verifies the HMAC using the *public* key as the shared secret,
-which the attacker also knows — and the ``alg: none`` variant, where the token
+which the attacker also knows - and the ``alg: none`` variant, where the token
 declares that it is unsigned.
 
 The defence here is structural rather than a special case: **the algorithm is a

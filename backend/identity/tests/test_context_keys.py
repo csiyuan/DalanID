@@ -282,7 +282,7 @@ class AuditChainTests(ContextKeyTestCase):
 class ConcurrencyTests(TransactionTestCase):
     """The audit chain must stay single-threaded in effect, not just in theory.
 
-    Appending is serial by construction — an entry hashes its predecessor — so
+    Appending is serial by construction - an entry hashes its predecessor - so
     concurrent disclosure requests contend for the head of the chain. These
     tests use TransactionTestCase rather than TestCase because the threads need
     to see each other's committed writes, which a test-wide transaction would

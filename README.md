@@ -11,7 +11,7 @@ service verifies it through five layers and returns only the fields that
 purpose permits. Which fields a context may see are rows in the database, not
 branches in code.
 
-    backend/   Django REST Framework service — the system itself
+    backend/   Django REST Framework service - the system itself
     src/       React client; a thin renderer that computes nothing
 
 The interface decides nothing. Every field it displays arrives from the
@@ -38,13 +38,13 @@ Point the client elsewhere with `VITE_API_BASE`:
 
 ## What to look at
 
-- **Context selector** — each choice is a fresh authenticated request.
-- **Date of birth** — shows an age band, never the raw date. The `derived`
+- **Context selector** - each choice is a fresh authenticated request.
+- **Date of birth** - shows an age band, never the raw date. The `derived`
   badge marks fields transformed before release.
-- **Compare** — two contexts side by side, two separate API calls.
-- **New context** — posts to the role-gated creation endpoint. Try requesting
+- **Compare** - two contexts side by side, two separate API calls.
+- **New context** - posts to the role-gated creation endpoint. Try requesting
   all eight fields and the server will refuse it.
-- **Verify audit chain** — walks the hash-linked disclosure log.
+- **Verify audit chain** - walks the hash-linked disclosure log.
 
 ## Layout
 

@@ -26,8 +26,8 @@ Ordering note. The relying party must be identified *before* the signature can
 be checked, because the secret needed to verify the signature belongs to that
 party. Identity is therefore read from an as-yet-unverified payload. This is
 the same pattern as the ``kid`` header in JWS (RFC 7515) and is safe only
-because the unverified value is used for exactly one purpose — selecting a
-candidate secret — and nothing in the payload is trusted until step 3 passes.
+because the unverified value is used for exactly one purpose - selecting a
+candidate secret - and nothing in the payload is trusted until step 3 passes.
 
 Threat model. HMAC gives authenticity and integrity under a shared secret; it
 does not give non-repudiation, since the verifying service holds the same
@@ -280,7 +280,7 @@ def consume_context_key(raw_key: str | None) -> KeyVerification:
     """Verify a key and spend it, so it cannot be presented twice.
 
     Verification and consumption are separate functions on purpose.
-    :func:`verify_context_key` is pure — it answers "is this key valid?" and
+    :func:`verify_context_key` is pure - it answers "is this key valid?" and
     can be called freely by tests, tooling or a future dry-run endpoint without
     side effects. Consumption adds the one irreversible step, claiming the
     key's ``jti``, and is what request handling actually calls.
