@@ -1,0 +1,558 @@
+{
+  "correctness": {
+    "cases": 48,
+    "passes": 48,
+    "failures": 0,
+    "rows": [
+      {
+        "context": "immigration",
+        "attribute": "dob",
+        "expected": "disclose",
+        "actual": "disclosed",
+        "result": "pass"
+      },
+      {
+        "context": "immigration",
+        "attribute": "legal_name",
+        "expected": "disclose",
+        "actual": "disclosed",
+        "result": "pass"
+      },
+      {
+        "context": "immigration",
+        "attribute": "nickname",
+        "expected": "withhold",
+        "actual": "withheld",
+        "result": "pass"
+      },
+      {
+        "context": "immigration",
+        "attribute": "passport",
+        "expected": "disclose",
+        "actual": "disclosed",
+        "result": "pass"
+      },
+      {
+        "context": "immigration",
+        "attribute": "risk",
+        "expected": "withhold",
+        "actual": "withheld",
+        "result": "pass"
+      },
+      {
+        "context": "immigration",
+        "attribute": "tax_id",
+        "expected": "withhold",
+        "actual": "withheld",
+        "result": "pass"
+      },
+      {
+        "context": "immigration",
+        "attribute": "vaccination",
+        "expected": "withhold",
+        "actual": "withheld",
+        "result": "pass"
+      },
+      {
+        "context": "immigration",
+        "attribute": "vid_token",
+        "expected": "withhold",
+        "actual": "withheld",
+        "result": "pass"
+      },
+      {
+        "context": "public_health",
+        "attribute": "dob",
+        "expected": "disclose",
+        "actual": "disclosed",
+        "result": "pass"
+      },
+      {
+        "context": "public_health",
+        "attribute": "legal_name",
+        "expected": "disclose",
+        "actual": "disclosed",
+        "result": "pass"
+      },
+      {
+        "context": "public_health",
+        "attribute": "nickname",
+        "expected": "withhold",
+        "actual": "withheld",
+        "result": "pass"
+      },
+      {
+        "context": "public_health",
+        "attribute": "passport",
+        "expected": "withhold",
+        "actual": "withheld",
+        "result": "pass"
+      },
+      {
+        "context": "public_health",
+        "attribute": "risk",
+        "expected": "withhold",
+        "actual": "withheld",
+        "result": "pass"
+      },
+      {
+        "context": "public_health",
+        "attribute": "tax_id",
+        "expected": "withhold",
+        "actual": "withheld",
+        "result": "pass"
+      },
+      {
+        "context": "public_health",
+        "attribute": "vaccination",
+        "expected": "disclose",
+        "actual": "disclosed",
+        "result": "pass"
+      },
+      {
+        "context": "public_health",
+        "attribute": "vid_token",
+        "expected": "withhold",
+        "actual": "withheld",
+        "result": "pass"
+      },
+      {
+        "context": "banking",
+        "attribute": "dob",
+        "expected": "disclose",
+        "actual": "disclosed",
+        "result": "pass"
+      },
+      {
+        "context": "banking",
+        "attribute": "legal_name",
+        "expected": "disclose",
+        "actual": "disclosed",
+        "result": "pass"
+      },
+      {
+        "context": "banking",
+        "attribute": "nickname",
+        "expected": "withhold",
+        "actual": "withheld",
+        "result": "pass"
+      },
+      {
+        "context": "banking",
+        "attribute": "passport",
+        "expected": "withhold",
+        "actual": "withheld",
+        "result": "pass"
+      },
+      {
+        "context": "banking",
+        "attribute": "risk",
+        "expected": "withhold",
+        "actual": "withheld",
+        "result": "pass"
+      },
+      {
+        "context": "banking",
+        "attribute": "tax_id",
+        "expected": "disclose",
+        "actual": "disclosed",
+        "result": "pass"
+      },
+      {
+        "context": "banking",
+        "attribute": "vaccination",
+        "expected": "withhold",
+        "actual": "withheld",
+        "result": "pass"
+      },
+      {
+        "context": "banking",
+        "attribute": "vid_token",
+        "expected": "withhold",
+        "actual": "withheld",
+        "result": "pass"
+      },
+      {
+        "context": "insurance",
+        "attribute": "dob",
+        "expected": "disclose",
+        "actual": "disclosed",
+        "result": "pass"
+      },
+      {
+        "context": "insurance",
+        "attribute": "legal_name",
+        "expected": "withhold",
+        "actual": "withheld",
+        "result": "pass"
+      },
+      {
+        "context": "insurance",
+        "attribute": "nickname",
+        "expected": "withhold",
+        "actual": "withheld",
+        "result": "pass"
+      },
+      {
+        "context": "insurance",
+        "attribute": "passport",
+        "expected": "withhold",
+        "actual": "withheld",
+        "result": "pass"
+      },
+      {
+        "context": "insurance",
+        "attribute": "risk",
+        "expected": "disclose",
+        "actual": "disclosed",
+        "result": "pass"
+      },
+      {
+        "context": "insurance",
+        "attribute": "tax_id",
+        "expected": "withhold",
+        "actual": "withheld",
+        "result": "pass"
+      },
+      {
+        "context": "insurance",
+        "attribute": "vaccination",
+        "expected": "withhold",
+        "actual": "withheld",
+        "result": "pass"
+      },
+      {
+        "context": "insurance",
+        "attribute": "vid_token",
+        "expected": "withhold",
+        "actual": "withheld",
+        "result": "pass"
+      },
+      {
+        "context": "public_service",
+        "attribute": "dob",
+        "expected": "withhold",
+        "actual": "withheld",
+        "result": "pass"
+      },
+      {
+        "context": "public_service",
+        "attribute": "legal_name",
+        "expected": "withhold",
+        "actual": "withheld",
+        "result": "pass"
+      },
+      {
+        "context": "public_service",
+        "attribute": "nickname",
+        "expected": "withhold",
+        "actual": "withheld",
+        "result": "pass"
+      },
+      {
+        "context": "public_service",
+        "attribute": "passport",
+        "expected": "withhold",
+        "actual": "withheld",
+        "result": "pass"
+      },
+      {
+        "context": "public_service",
+        "attribute": "risk",
+        "expected": "withhold",
+        "actual": "withheld",
+        "result": "pass"
+      },
+      {
+        "context": "public_service",
+        "attribute": "tax_id",
+        "expected": "withhold",
+        "actual": "withheld",
+        "result": "pass"
+      },
+      {
+        "context": "public_service",
+        "attribute": "vaccination",
+        "expected": "withhold",
+        "actual": "withheld",
+        "result": "pass"
+      },
+      {
+        "context": "public_service",
+        "attribute": "vid_token",
+        "expected": "disclose",
+        "actual": "disclosed",
+        "result": "pass"
+      },
+      {
+        "context": "social",
+        "attribute": "dob",
+        "expected": "withhold",
+        "actual": "withheld",
+        "result": "pass"
+      },
+      {
+        "context": "social",
+        "attribute": "legal_name",
+        "expected": "withhold",
+        "actual": "withheld",
+        "result": "pass"
+      },
+      {
+        "context": "social",
+        "attribute": "nickname",
+        "expected": "disclose",
+        "actual": "disclosed",
+        "result": "pass"
+      },
+      {
+        "context": "social",
+        "attribute": "passport",
+        "expected": "withhold",
+        "actual": "withheld",
+        "result": "pass"
+      },
+      {
+        "context": "social",
+        "attribute": "risk",
+        "expected": "withhold",
+        "actual": "withheld",
+        "result": "pass"
+      },
+      {
+        "context": "social",
+        "attribute": "tax_id",
+        "expected": "withhold",
+        "actual": "withheld",
+        "result": "pass"
+      },
+      {
+        "context": "social",
+        "attribute": "vaccination",
+        "expected": "withhold",
+        "actual": "withheld",
+        "result": "pass"
+      },
+      {
+        "context": "social",
+        "attribute": "vid_token",
+        "expected": "withhold",
+        "actual": "withheld",
+        "result": "pass"
+      }
+    ]
+  },
+  "refusals": {
+    "cases": 15,
+    "passes": 15,
+    "failures": 0,
+    "rows": [
+      {
+        "case": "no key presented",
+        "expected_status": 401,
+        "actual_status": 401,
+        "expected_reason": "CTXKEY_MISSING",
+        "actual_reason": "CTXKEY_MISSING",
+        "result": "pass"
+      },
+      {
+        "case": "not a token",
+        "expected_status": 401,
+        "actual_status": 401,
+        "expected_reason": "CTXKEY_MALFORMED",
+        "actual_reason": "CTXKEY_MALFORMED",
+        "result": "pass"
+      },
+      {
+        "case": "undecodable payload",
+        "expected_status": 401,
+        "actual_status": 401,
+        "expected_reason": "CTXKEY_MALFORMED",
+        "actual_reason": "CTXKEY_MALFORMED",
+        "result": "pass"
+      },
+      {
+        "case": "oversized key (10 KB)",
+        "expected_status": 401,
+        "actual_status": 401,
+        "expected_reason": "CTXKEY_MALFORMED",
+        "actual_reason": "CTXKEY_MALFORMED",
+        "result": "pass"
+      },
+      {
+        "case": "signature: one byte flipped",
+        "expected_status": 401,
+        "actual_status": 401,
+        "expected_reason": "CTXKEY_BAD_SIGNATURE",
+        "actual_reason": "CTXKEY_BAD_SIGNATURE",
+        "result": "pass"
+      },
+      {
+        "case": "payload rewritten to a richer context",
+        "expected_status": 401,
+        "actual_status": 401,
+        "expected_reason": "CTXKEY_BAD_SIGNATURE",
+        "actual_reason": "CTXKEY_BAD_SIGNATURE",
+        "result": "pass"
+      },
+      {
+        "case": "signed with another party's secret",
+        "expected_status": 401,
+        "actual_status": 401,
+        "expected_reason": "CTXKEY_BAD_SIGNATURE",
+        "actual_reason": "CTXKEY_BAD_SIGNATURE",
+        "result": "pass"
+      },
+      {
+        "case": "expired key",
+        "expected_status": 401,
+        "actual_status": 401,
+        "expected_reason": "CTXKEY_EXPIRED",
+        "actual_reason": "CTXKEY_EXPIRED",
+        "result": "pass"
+      },
+      {
+        "case": "unregistered relying party",
+        "expected_status": 401,
+        "actual_status": 401,
+        "expected_reason": "RP_UNKNOWN",
+        "actual_reason": "RP_UNKNOWN",
+        "result": "pass"
+      },
+      {
+        "case": "valid signature, no grant held",
+        "expected_status": 401,
+        "actual_status": 401,
+        "expected_reason": "CONTEXT_NOT_GRANTED",
+        "actual_reason": "CONTEXT_NOT_GRANTED",
+        "result": "pass"
+      },
+      {
+        "case": "key replayed",
+        "expected_status": 401,
+        "actual_status": 401,
+        "expected_reason": "CTXKEY_REPLAYED",
+        "actual_reason": "CTXKEY_REPLAYED",
+        "result": "pass"
+      },
+      {
+        "case": "grant revoked after issuance",
+        "expected_status": 401,
+        "actual_status": 401,
+        "expected_reason": "CONTEXT_NOT_GRANTED",
+        "actual_reason": "CONTEXT_NOT_GRANTED",
+        "result": "pass"
+      },
+      {
+        "case": "context revoked after issuance",
+        "expected_status": 401,
+        "actual_status": 401,
+        "expected_reason": "CONTEXT_INACTIVE",
+        "actual_reason": "CONTEXT_INACTIVE",
+        "result": "pass"
+      },
+      {
+        "case": "relying party deactivated",
+        "expected_status": 401,
+        "actual_status": 401,
+        "expected_reason": "RP_INACTIVE",
+        "actual_reason": "RP_INACTIVE",
+        "result": "pass"
+      },
+      {
+        "case": "probe for a non-existent citizen",
+        "expected_status": 404,
+        "actual_status": 404,
+        "expected_reason": "CITIZEN_UNKNOWN",
+        "actual_reason": "CITIZEN_UNKNOWN",
+        "result": "pass"
+      }
+    ]
+  },
+  "minimisation": {
+    "schema_size": 8,
+    "mean_fields_disclosed": 2.17,
+    "mean_percent_withheld": 72.9,
+    "rows": [
+      {
+        "context": "immigration",
+        "disclosed": 3,
+        "withheld": 5,
+        "percent_withheld": 62.5,
+        "derived": 1
+      },
+      {
+        "context": "public_health",
+        "disclosed": 3,
+        "withheld": 5,
+        "percent_withheld": 62.5,
+        "derived": 1
+      },
+      {
+        "context": "banking",
+        "disclosed": 3,
+        "withheld": 5,
+        "percent_withheld": 62.5,
+        "derived": 1
+      },
+      {
+        "context": "insurance",
+        "disclosed": 2,
+        "withheld": 6,
+        "percent_withheld": 75.0,
+        "derived": 1
+      },
+      {
+        "context": "public_service",
+        "disclosed": 1,
+        "withheld": 7,
+        "percent_withheld": 87.5,
+        "derived": 0
+      },
+      {
+        "context": "social",
+        "disclosed": 1,
+        "withheld": 7,
+        "percent_withheld": 87.5,
+        "derived": 0
+      }
+    ]
+  },
+  "audit": {
+    "entries": 656,
+    "before_tamper": {
+      "status": 200,
+      "intact": true
+    },
+    "after_tamper": {
+      "status": 409,
+      "intact": false,
+      "broken_at": 3,
+      "detail": "entry contents altered"
+    },
+    "after_restore": {
+      "status": 200,
+      "intact": true
+    },
+    "tampered_sequence": 3,
+    "detected": true
+  },
+  "latency": {
+    "contextual": {
+      "n": 300,
+      "mean_ms": 8.18,
+      "p50_ms": 8.01,
+      "p95_ms": 9.05,
+      "p99_ms": 10.51
+    },
+    "unprotected_baseline": {
+      "n": 300,
+      "mean_ms": 4.82,
+      "p50_ms": 4.65,
+      "p95_ms": 5.59,
+      "p99_ms": 6.27
+    },
+    "overhead_p50_ms": 3.36,
+    "overhead_percent": 72.3
+  }
+}

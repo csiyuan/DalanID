@@ -1,0 +1,11 @@
+# Runtime
+Django>=5.2,<7.0
+djangorestframework>=3.15
+django-cors-headers>=4.4
+
+# Ed25519 Context-Key signatures (identity/signatures.py). Without this the
+# service cannot verify any key on the public-key suite.
+cryptography>=42.0
+
+# Figure generation only (make_figures.py); not imported by the service.
+matplotlib>=3.8

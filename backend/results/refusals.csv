@@ -1,0 +1,16 @@
+case,expected_status,actual_status,expected_reason,actual_reason,result
+no key presented,401,401,CTXKEY_MISSING,CTXKEY_MISSING,pass
+not a token,401,401,CTXKEY_MALFORMED,CTXKEY_MALFORMED,pass
+undecodable payload,401,401,CTXKEY_MALFORMED,CTXKEY_MALFORMED,pass
+oversized key (10 KB),401,401,CTXKEY_MALFORMED,CTXKEY_MALFORMED,pass
+signature: one byte flipped,401,401,CTXKEY_BAD_SIGNATURE,CTXKEY_BAD_SIGNATURE,pass
+payload rewritten to a richer context,401,401,CTXKEY_BAD_SIGNATURE,CTXKEY_BAD_SIGNATURE,pass
+signed with another party's secret,401,401,CTXKEY_BAD_SIGNATURE,CTXKEY_BAD_SIGNATURE,pass
+expired key,401,401,CTXKEY_EXPIRED,CTXKEY_EXPIRED,pass
+unregistered relying party,401,401,RP_UNKNOWN,RP_UNKNOWN,pass
+valid signature, no grant held,401,401,CONTEXT_NOT_GRANTED,CONTEXT_NOT_GRANTED,pass
+key replayed,401,401,CTXKEY_REPLAYED,CTXKEY_REPLAYED,pass
+grant revoked after issuance,401,401,CONTEXT_NOT_GRANTED,CONTEXT_NOT_GRANTED,pass
+context revoked after issuance,401,401,CONTEXT_INACTIVE,CONTEXT_INACTIVE,pass
+relying party deactivated,401,401,RP_INACTIVE,RP_INACTIVE,pass
+probe for a non-existent citizen,404,404,CITIZEN_UNKNOWN,CITIZEN_UNKNOWN,pass

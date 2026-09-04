@@ -1,0 +1,27 @@
+# Node / Vite
+node_modules/
+dist/
+.vite/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local database and secrets
+db.sqlite3
+.env
+
+# Coverage
+.coverage
+htmlcov/
+
+# OS
+.DS_Store
+
+# The report itself — not published with the source
+*.docx
+
+# Local working notes — never published
+CLAUDE.md

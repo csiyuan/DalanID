@@ -1,0 +1,7 @@
+context,disclosed,withheld,percent_withheld,derived
+immigration,3,5,62.5,1
+public_health,3,5,62.5,1
+banking,3,5,62.5,1
+insurance,2,6,75.0,1
+public_service,1,7,87.5,0
+social,1,7,87.5,0
