@@ -22,6 +22,3 @@ htmlcov/
 
 # The report itself - not published with the source
 *.docx
-
-# Local working notes - never published
-CLAUDE.md
