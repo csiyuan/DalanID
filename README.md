@@ -23,7 +23,11 @@ All data is fictional.
 
 The API must be running first (see `backend/README.md`):
 
-    cd backend && python manage.py runserver
+    cd backend && DALANID_DEMO=1 python manage.py runserver
+
+`DALANID_DEMO=1` matters: demonstration affordances are off in the committed
+configuration, and without it the service will not mint the Context-Keys the
+client needs. See `backend/README.md`.
 
 Then:
 

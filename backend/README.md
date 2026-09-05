@@ -17,7 +17,21 @@ All personal data in this repository is synthetic.
     pip install -r requirements.txt
     python manage.py migrate
     python manage.py seed_demo
-    python manage.py runserver
+    DALANID_DEMO=1 python manage.py runserver
+
+`DALANID_DEMO=1` is required to see the demonstration. The committed
+configuration is the hardened one: every demonstration affordance defaults to
+off, so a deployment that sets nothing gets the safe behaviour. Without the
+variable the service runs correctly but refuses to mint Context-Keys over
+HTTP, and the browser client cannot obtain one, so no disclosure will appear.
+
+| Variable | Default | Effect when set |
+|---|---|---|
+| `DALANID_DEMO` | off | Turns on the three affordances below together |
+| `DALANID_ALLOW_KEY_ISSUANCE` | off | `POST /keys/issue` mints keys; needed by the client |
+| `DALANID_ALLOW_FULL_RECORD` | off | `GET /profile/<id>/full` serves the unprotected baseline |
+| `DALANID_ALLOW_UNAUTHENTICATED_SUBJECT_TOKEN` | off | Legacy subject token without login |
+| `DALANID_DEBUG` | off | Django debug mode |
 
 ## Test
 
