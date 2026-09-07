@@ -188,7 +188,10 @@ def issue_challenge(citizen: Citizen) -> str:
 
 def verify_challenge(raw: str | None):
     """Returns ``(citizen, reason)``; reason is empty on success."""
-    if not raw or raw.count(".") != 1:
+    # The challenge arrives from a JSON body, so it is whatever type the
+    # caller sent. A number or object reaching .count() raised rather than
+    # returning a refusal, giving an unauthenticated caller a 500.
+    if not isinstance(raw, str) or raw.count(".") != 1:
         return None, CHALLENGE_INVALID
     payload, signature = raw.split(".")
     try:
