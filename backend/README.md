@@ -27,11 +27,19 @@ HTTP, and the browser client cannot obtain one, so no disclosure will appear.
 
 | Variable | Default | Effect when set |
 |---|---|---|
-| `DALANID_DEMO` | off | Turns on the three affordances below together |
-| `DALANID_ALLOW_KEY_ISSUANCE` | off | `POST /keys/issue` mints keys; needed by the client |
-| `DALANID_ALLOW_FULL_RECORD` | off | `GET /profile/<id>/full` serves the unprotected baseline |
-| `DALANID_ALLOW_UNAUTHENTICATED_SUBJECT_TOKEN` | off | Legacy subject token without login |
-| `DALANID_DEBUG` | off | Django debug mode |
+| `DALANID_DEMO` | off | Convenience switch for the three rows that follow it |
+| `DALANID_ALLOW_KEY_ISSUANCE` | follows `DALANID_DEMO` | `POST /keys/issue` mints keys; the browser client needs this |
+| `DALANID_ALLOW_FULL_RECORD` | follows `DALANID_DEMO` | `GET /profile/<id>/full` serves the unprotected baseline |
+| `DALANID_VERBOSE_REFUSALS` | follows `DALANID_DEMO` | Returns the precise refusal code rather than a collapsed one. Must be off in deployment: it reopens the membership oracle |
+| `DALANID_ALLOW_UNAUTHENTICATED_SUBJECT_TOKEN` | off, independent of `DALANID_DEMO` | Reopens the older subject-token route that required no login |
+| `DALANID_DEBUG` | off, independent of `DALANID_DEMO` | Django debug mode |
+| `DALANID_SECRET_KEY` | an insecure committed fallback | Signing key. Set this in any real deployment |
+| `DALANID_ALLOWED_HOSTS` | `localhost,127.0.0.1,[::1]` | Comma-separated hosts Django will serve |
+
+`DALANID_DEMO` does **not** enable the unauthenticated subject token or debug
+mode; those are separate switches. It does enable verbose refusals, so a
+demonstration exposed publicly would leak which relying parties are
+registered.
 
 ## Test
 

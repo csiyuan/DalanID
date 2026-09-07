@@ -98,8 +98,13 @@ def verify_subject_token(raw_token: str | None, public_id: str):
     if citizen is None or not citizen.access_secret:
         return None, UNKNOWN
 
+    # Compared as bytes. hmac.compare_digest refuses non-ASCII str operands
+    # and raises TypeError, so a single high byte in the header turned an
+    # authentication failure into an unhandled 500 for an unauthenticated
+    # caller. Encoding first keeps the comparison constant-time.
     if not hmac.compare_digest(
-        _sign(payload_b64, citizen.access_secret), signature
+        _sign(payload_b64, citizen.access_secret).encode("utf-8"),
+        signature.encode("utf-8"),
     ):
         return None, BAD_SIGNATURE
 

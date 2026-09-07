@@ -121,9 +121,14 @@ def verify_totp(secret_b32: str, code: str, at: float | None = None):
     Returns ``(ok, time_step)``. The time step is returned so the caller can
     record the code as spent against the exact window it matched.
     """
-    if not code or not code.strip().isdigit():
+    # str.isdigit() is true for Unicode digit forms other than 0-9, which
+    # compare_digest then refuses; and a JSON number arrives as int, which
+    # has no .strip(). Both reached the comparison and raised.
+    if not isinstance(code, str):
         return False, None
     code = code.strip()
+    if not code.isascii() or not code.isdigit():
+        return False, None
     now_step = int((at or time.time()) // TOTP_STEP_SECONDS)
     for delta in range(-TOTP_DRIFT_STEPS, TOTP_DRIFT_STEPS + 1):
         step = now_step + delta
@@ -201,7 +206,10 @@ def verify_challenge(raw: str | None):
         hmac.new(_challenge_secret(citizen).encode(),
                  payload.encode("ascii"), hashlib.sha256).digest()
     )
-    if not hmac.compare_digest(expected, signature):
+    # Bytes, for the reason given in subject.verify_subject_token: a
+    # non-ASCII signature would otherwise raise rather than compare.
+    if not hmac.compare_digest(expected.encode("utf-8"),
+                               signature.encode("utf-8")):
         return None, CHALLENGE_INVALID
     try:
         if timezone.now().timestamp() >= int(claims["exp"]):

@@ -29,6 +29,9 @@ jobs:
 
       - name: Run the test suite
         working-directory: backend
-        # No DALANID_* variables are set, so this exercises the hardened
-        # configuration: demonstration affordances off, DEBUG off.
+        # This does not exercise the hardened configuration. manage.py sets
+        # DALANID_DEMO=1 for any test run, because four tests assert the
+        # precise refusal codes and mint keys over HTTP, both of which ship
+        # disabled. The tests covering the deployed defaults switch them back
+        # off individually.
         run: python manage.py test identity
